@@ -1,5 +1,5 @@
-Title: Global Consulting Scheduling Application
-Purpose: This application allows users to manage customer records and appointments.
+Title: Enterprise Appointment Scheduling & CRM Application
+Purpose: This application allows users to manage customer records and appointments. CRUD functionality enabled across all records, as well as language translation created for the login screen. Advanced error handling and lambda functionality are seen in the application as well.
 
 **Author:** Tyler Harris<br>
 **Contact Information:** tcharris613@gmail.com<br>
