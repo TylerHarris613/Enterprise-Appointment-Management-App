@@ -1,7 +1,7 @@
 Title: Global Consulting Scheduling Application
 Purpose: This application allows users to manage customer records and appointments.
 
-**Author:** Tyler Harris
+**Author:** Tyler Harris<br>
 **Contact Information:** tcharris613@gmail.com
 **Student Application Version:** 1.0
 **Date:** 05/23/2023
