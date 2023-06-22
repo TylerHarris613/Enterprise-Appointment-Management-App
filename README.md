@@ -1,4 +1,4 @@
-Title: Enterprise Appointment Scheduling & CRM Application
+Title: Enterprise Appointment Scheduling & CRM Application  
 Purpose: This application allows users to manage customer records and appointments. CRUD functionality enabled across all records, as well as language translation created for the login screen. Advanced error handling and lambda functionality are seen in the application as well.
 
 **Author:** Tyler Harris<br>
