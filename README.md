@@ -8,7 +8,7 @@ Purpose: This application allows users to manage customer records and appointmen
 
 **IDE:** IntelliJ Community 2023.2<br>
 **JDK:** Java SE 11  
-**JavaFX:** JavaFX-11.0.2 (compatible with JDK 11)
+**JavaFX:** JavaFX-11.0.2 (compatible with JDK 11)  
 **MySQL Connector Driver Version:** mysql-connector-java-8.0.25
 
 **Directions for Running the Program:
