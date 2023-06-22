@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="432.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.addAppointmentsController">
+    <children>
+        <Label layoutX="14.0" layoutY="11.0" prefHeight="560.0" prefWidth="408.0" style="-fx-border-color: black; -fx-padding: 10; -fx-border-radius: 5;" />
+        <Label layoutX="27.0" layoutY="20.0" prefHeight="28.0" prefWidth="209.0" text="Add Appointment">
+            <font>
+                <Font name="Arial" size="23.0" />
+            </font>
+        </Label>
+        <Label layoutX="54.0" layoutY="82.0" text="Appointment ID">
+            <font>
+                <Font name="Arial" size="13.0" />
+            </font>
+        </Label>
+        <Label layoutX="54.0" layoutY="115.0" text="Appointment Title">
+            <font>
+                <Font name="Arial" size="13.0" />
+            </font>
+        </Label>
+        <TextField fx:id="addAppointmentID" editable="false" layoutX="214.0" layoutY="78.0" prefHeight="25.0" prefWidth="174.0" />
+        <TextField fx:id="addAppointmentTitle" layoutX="214.0" layoutY="111.0" prefHeight="25.0" prefWidth="174.0" />
+        <Label layoutX="54.0" layoutY="148.0" text="Appointment Description">
+            <font>
+                <Font name="Arial" size="13.0" />
+            </font>
+        </Label>
+        <TextField fx:id="addAppointmentDescription" layoutX="214.0" layoutY="144.0" prefHeight="25.0" prefWidth="174.0" />
+        <Label layoutX="54.0" layoutY="182.0" text="Appointment Location">
+            <font>
+                <Font name="Arial" size="13.0" />
+            </font>
+        </Label>
+        <ComboBox fx:id="addAppointmentContact" layoutX="212.0" layoutY="461.0" prefHeight="25.0" prefWidth="174.0" />
+        <Label layoutX="51.0" layoutY="465.0" text="Appointment Contact">
+            <font>
+                <Font name="Arial" size="13.0" />
+            </font>
+        </Label>
+        <DatePicker fx:id="addAppointmentStartDate" layoutX="212.0" layoutY="243.0" prefHeight="25.0" prefWidth="174.0" />
+        <Label layoutX="51.0" layoutY="247.0" text="Appointment Start Date">
+            <font>
+                <Font name="Arial" size="13.0" />
+            </font>
+        </Label>
+        <ComboBox fx:id="addAppointmentEndTime" layoutX="212.0" layoutY="353.0" prefHeight="26.0" prefWidth="174.0" />
+        <ComboBox fx:id="addAppointmentStartTime" layoutX="215.0" layoutY="277.0" prefHeight="26.0" prefWidth="174.0" />
+        <Label layoutX="52.0" layoutY="282.0" text="Start Time">
+            <font>
+                <Font name="Arial" size="13.0" />
+            </font>
+        </Label>
+        <Label layoutX="52.0" layoutY="358.0" text="End Time">
+            <font>
+                <Font name="Arial" size="13.0" />
+            </font>
+        </Label>
+        <DatePicker fx:id="addAppointmentEndDate" layoutX="212.0" layoutY="315.0" prefHeight="25.0" prefWidth="174.0" />
+        <Label layoutX="53.0" layoutY="319.0" text="Appointment End Date">
+            <font>
+                <Font name="Arial" size="13.0" />
+            </font>
+        </Label>
+        <Label layoutX="54.0" layoutY="397.0" text="Customer Id">
+            <font>
+                <Font name="Arial" size="13.0" />
+            </font>
+        </Label>
+        <Button fx:id="addAppointmentSaveButton" layoutX="111.0" layoutY="511.0" mnemonicParsing="false" onAction="#addAppointmentSaveButton" text="Save">
+            <font>
+                <Font name="Arial" size="17.0" />
+            </font>
+        </Button>
+        <Button fx:id="addAppointmentCancelButton" layoutX="265.0" layoutY="511.0" mnemonicParsing="false" onAction="#addAppointmentCancelButton" text="Cancel">
+            <font>
+                <Font name="Arial" size="17.0" />
+            </font>
+        </Button>
+        <Label layoutX="52.0" layoutY="216.0" text="Appointment Type">
+            <font>
+                <Font name="Arial" size="13.0" />
+            </font>
+        </Label>
+        <TextField fx:id="addAppointmentType" layoutX="214.0" layoutY="212.0" prefHeight="25.0" prefWidth="174.0" />
+        <TextField fx:id="addAppointmentLocation" layoutX="214.0" layoutY="178.0" prefHeight="25.0" prefWidth="174.0" />
+        <Label layoutX="52.0" layoutY="430.0" text="User ID">
+            <font>
+                <Font name="Arial" size="13.0" />
+            </font>
+        </Label>
+        <TextField fx:id="addAppointmentCustomerID" layoutX="212.0" layoutY="392.0" prefWidth="150.0" />
+        <TextField fx:id="addAppointmentUserID" layoutX="212.0" layoutY="426.0" prefWidth="150.0" />
+    </children>
+</AnchorPane>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="683.0"
+            prefWidth="1450.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controller.appointmentsController">
+    <children>
+        <Label layoutX="14.0" layoutY="11.0" prefHeight="663.0" prefWidth="1423.0"
+               style="-fx-border-color: black; -fx-padding: 10; -fx-border-radius: 5;">
+            <font>
+                <Font name="Arial Bold" size="13.0"/>
+            </font>
+        </Label>
+        <Label layoutX="29.0" layoutY="25.0" prefHeight="26.0" prefWidth="146.0" text="Appointments">
+            <font>
+                <Font name="Arial" size="23.0"/>
+            </font>
+        </Label>
+        <TableView fx:id="allAppointmentsTable" layoutX="29.0" layoutY="59.0" onMouseClicked="#loadAppointment"
+                   prefHeight="361.0" prefWidth="1393.0">
+            <columns>
+                <TableColumn fx:id="appointmentID" prefWidth="101.0" text="Appointment ID"/>
+                <TableColumn fx:id="appointmentTitle" prefWidth="236.0" text="Title"/>
+                <TableColumn fx:id="appointmentDescription" prefWidth="261.0" text="Description"/>
+                <TableColumn fx:id="appointmentLocation" prefWidth="117.0" text="Location"/>
+                <TableColumn fx:id="tableContactID" prefWidth="68.0" text="Contact ID"/>
+                <TableColumn fx:id="appointmentType" prefWidth="186.0" text="Type"/>
+                <TableColumn fx:id="appointmentStart" prefWidth="140.0" text="Start Date &amp; Time"/>
+                <TableColumn fx:id="appointmentEnd" prefWidth="138.0" text="End Date &amp; Time"/>
+                <TableColumn fx:id="appointmentCustomerID" prefWidth="86.0" text="Customer ID"/>
+                <TableColumn fx:id="tableUserID" prefWidth="58.0" text="User ID"/>
+            </columns>
+        </TableView>
+        <RadioButton fx:id="appointmentWeekRadioButton" layoutX="1166.0" layoutY="30.0" mnemonicParsing="false"
+                     onAction="#appointmentWeekSelected" text="Week">
+            <toggleGroup>
+                <ToggleGroup fx:id="appointment"/>
+            </toggleGroup>
+            <font>
+                <Font name="Arial" size="13.0"/>
+            </font>
+        </RadioButton>
+        <RadioButton fx:id="appointmentMonthRadioButton" layoutX="1233.0" layoutY="30.0" mnemonicParsing="false"
+                     onAction="#selectedAppointmentMonth" text="Month" toggleGroup="$appointment">
+            <font>
+                <Font name="Arial" size="13.0"/>
+            </font>
+        </RadioButton>
+        <RadioButton fx:id="allAppointmentRadioButton" layoutX="1300.0" layoutY="30.0" mnemonicParsing="false"
+                     onAction="#allSelectedAppointments" selected="true" text="All Appointments"
+                     toggleGroup="$appointment">
+            <font>
+                <Font name="Arial" size="13.0"/>
+            </font>
+        </RadioButton>
+        <Button fx:id="addAppointment" layoutX="630.0" layoutY="566.0" mnemonicParsing="false"
+                onAction="#addAppointment" text="Add Appointment">
+            <font>
+                <Font name="Arial" size="17.0"/>
+            </font>
+        </Button>
+        <Button fx:id="deleteAppointment" layoutX="427.0" layoutY="616.0" mnemonicParsing="false"
+                onAction="#deleteAppointment" text="Delete Appointment">
+            <font>
+                <Font name="Arial" size="17.0"/>
+            </font>
+        </Button>
+        <Button fx:id="backToMainMenu" layoutX="810.0" layoutY="620.0" mnemonicParsing="false"
+                onAction="#backToMainMenu" prefHeight="26.0" prefWidth="171.0" text="Exit to Application Menu">
+            <font>
+                <Font name="Arial" size="13.0"/>
+            </font>
+        </Button>
+        <TextField fx:id="updateAppointmentTitle" layoutX="175.0" layoutY="462.0"/>
+        <Label layoutX="29.0" layoutY="466.0" text="Appointment Title">
+            <font>
+                <Font name="Arial" size="13.0"/>
+            </font>
+        </Label>
+        <Label layoutX="28.0" layoutY="500.0" text="Appointment Description">
+            <font>
+                <Font name="Arial" size="13.0"/>
+            </font>
+        </Label>
+        <TextField fx:id="addAppointmentDescription" layoutX="175.0" layoutY="495.0"/>
+        <Label layoutX="29.0" layoutY="532.0" text="Appointment Location">
+            <font>
+                <Font name="Arial" size="13.0"/>
+            </font>
+        </Label>
+        <ComboBox fx:id="addAppointmentContact" layoutX="505.0" layoutY="513.0" prefHeight="26.0" prefWidth="131.0"/>
+        <Label layoutX="361.0" layoutY="518.0" text="Appointment Contact">
+            <font>
+                <Font name="Arial" size="13.0"/>
+            </font>
+        </Label>
+        <DatePicker fx:id="addAppointmentStartDate" layoutX="505.0" layoutY="442.0" prefHeight="26.0"
+                    prefWidth="131.0"/>
+        <Label layoutX="362.0" layoutY="446.0" text="Appointment Start Date">
+            <font>
+                <Font name="Arial" size="13.0"/>
+            </font>
+        </Label>
+        <ComboBox fx:id="addAppointmentEndTime" layoutX="841.0" layoutY="476.0" prefHeight="26.0" prefWidth="131.0"/>
+        <ComboBox fx:id="addAppointmentStartTime" layoutX="505.0" layoutY="476.0" prefHeight="26.0" prefWidth="131.0"/>
+        <Label layoutX="362.0" layoutY="480.0" text="Start Time">
+            <font>
+                <Font name="Arial" size="13.0"/>
+            </font>
+        </Label>
+        <Label layoutX="704.0" layoutY="481.0" text="End Time">
+            <font>
+                <Font name="Arial" size="13.0"/>
+            </font>
+        </Label>
+        <DatePicker fx:id="addAppointmentEndDate" layoutX="841.0" layoutY="441.0" prefHeight="26.0" prefWidth="131.0"/>
+        <Label layoutX="704.0" layoutY="446.0" text="Appointment End Date">
+            <font>
+                <Font name="Arial" size="13.0"/>
+            </font>
+        </Label>
+        <Label layoutX="29.0" layoutY="598.0" text="Customer Id">
+            <font>
+                <Font name="Arial" size="13.0"/>
+            </font>
+        </Label>
+        <Label layoutX="27.0" layoutY="566.0" text="Appointment Type">
+            <font>
+                <Font name="Arial" size="13.0"/>
+            </font>
+        </Label>
+        <TextField fx:id="addAppointmentType" layoutX="175.0" layoutY="562.0"/>
+        <TextField fx:id="addAppointmentLocation" layoutX="175.0" layoutY="528.0"/>
+        <Button fx:id="saveAppointment" layoutX="424.0" layoutY="566.0" mnemonicParsing="false"
+                onAction="#saveAppointment" text="Update Appointment">
+            <font>
+                <Font name="Arial" size="17.0"/>
+            </font>
+        </Button>
+        <TextField fx:id="updateAppointmentID" editable="false" layoutX="175.0" layoutY="429.0"/>
+        <Label layoutX="29.0" layoutY="434.0" text="Appointment ID">
+            <font>
+                <Font name="Arial" size="13.0"/>
+            </font>
+        </Label>
+        <Label layoutX="704.0" layoutY="518.0" text="User ID">
+            <font>
+                <Font name="Arial" size="13.0"/>
+            </font>
+        </Label>
+        <TextField fx:id="addAppointmentCustomerID" layoutX="175.0" layoutY="594.0" prefHeight="25.0" prefWidth="102.0"/>
+        <TextField fx:id="addAppointmentUserID" layoutX="841.0" layoutY="516.0" prefHeight="25.0" prefWidth="102.0"/>
+    </children>
+</AnchorPane>
