@@ -20,13 +20,15 @@ This is an appointment management system application developed in Java for manag
 - MySQL: The database management system used for storing and retrieving appointment, customer, and user data.
 - JDBC: The Java Database Connectivity API for connecting to the MySQL database and executing SQL queries.
 
-## Getting Started
+## Installation
 
-To get started with the appointment management system, follow these steps:
+To install and run the appointment management system, follow these steps:
 
 1. Clone the repository: `git clone https://github.com/TylerHarris613/Enterprise-Appointment-Management-App.git`
 2. Import the project into your preferred Java IDE.
-3. Configure the MySQL database connection settings in the application.
+3. Set up the MySQL database:
+   - Create a MySQL database and tables using the provided SQL script (`database_script.sql`).
+   - Configure the MySQL connection details in the application code (`src/main/JDBC.java`).
 4. Compile and run the application.
 5. Log in with your user credentials and start managing appointments.
 
